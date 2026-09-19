@@ -1,0 +1,7 @@
+interface:
+  display_name: "Self-Review"
+  short_description: "Review and fix recent ZEEKR task changes"
+  default_prompt: "Use $selfreview in automode to review and fix my current task changes before commit or push."
+
+policy:
+  allow_implicit_invocation: true
