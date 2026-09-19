@@ -144,7 +144,7 @@
       "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/net/ZeekrConst.kt",
       "kind": "source_observation",
       "accessed": "2026-09-19",
-      "scope": "EU services and Android device values.",
+      "scope": "EU service and device defaults; compare the separate API library UAE host candidate.",
       "limit": "Pinned Android source; target vehicle behavior is not established."
     },
     {
@@ -181,7 +181,7 @@
       "kind": "official_publication",
       "accessed": "2026-09-19",
       "scope": "Global iOS app identity and advertised features; metadata returned version 1.6.6.",
-      "limit": "The installed app version is unknown. Features are not separated by transport."
+      "limit": "Store features are not separated by transport. Installed version was confirmed separately by a read-only device metadata query."
     },
     {
       "id": "official-ae-metadata",
@@ -308,6 +308,96 @@
       "accessed": "2026-09-19",
       "scope": "watchOS 9 background discovery, characteristic alerts, Series 6 requirement, and runtime limits.",
       "limit": "Historical platform description; current device budgets need tests."
+    },
+    {
+      "id": "oz-enrollment-login",
+      "title": "OpenZeekr account and xchanger login",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/net/AccountLogin.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Account token chain, numeric user ID, xchanger session, device registration, and session effects.",
+      "limit": "EU defaults and source comments; no UAE login performed. Some referenced capture notes are absent from the public repository."
+    },
+    {
+      "id": "oz-enrollment-signing",
+      "title": "OpenZeekr request signature construction",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/net/Signing.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Separate user-center and TSP signatures.",
+      "limit": "Source behavior, not verified UAE signing inputs."
+    },
+    {
+      "id": "oz-enrollment-headers",
+      "title": "OpenZeekr TSP headers and signed body",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/net/Interceptors.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "App-instance ID, encrypted VIN header, canonical transmitted JSON, and account displacement code.",
+      "limit": "No account tokens or signing values were obtained or used."
+    },
+    {
+      "id": "ev-api-regions",
+      "title": "Zeekr EV API regional discovery and login",
+      "url": "https://github.com/Fryyyyy/zeekr_ev_api/blob/4dc9e1789e577864003f9e27b293ade8d47e1e70/src/zeekr_ev_api/client.py",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Country row lookup and token chain; UAE lacks an explicit project-ID mapping.",
+      "limit": "Cloud library, not a digital-key enrollment or BLE validation result."
+    },
+    {
+      "id": "ev-api-regional-hosts",
+      "title": "Zeekr EV API service hosts",
+      "url": "https://github.com/Fryyyyy/zeekr_ev_api/blob/4dc9e1789e577864003f9e27b293ade8d47e1e70/src/zeekr_ev_api/const.py",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "UAE maps to the me-snc-tsp-api-gw host; separate bootstrap and account service names.",
+      "limit": "Candidate server mapping; no authenticated UAE request performed."
+    },
+    {
+      "id": "ha-country-map",
+      "title": "Home Assistant country and region mapping",
+      "url": "https://github.com/Fryyyyy/zeekr_homeassistant/blob/b7ecc7101107a11f6ba2e80bc0375464d6de500b/custom_components/zeekr_ev/const.py",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "AE, BH, KW, and QA map to UAE in the integration.",
+      "limit": "UI mapping is not a captured backend response or proof for all GCC countries."
+    },
+    {
+      "id": "extractor-regions",
+      "title": "Android app input extraction limits",
+      "url": "https://github.com/Wysie/zeekr_key_extractor/blob/7875948c22172dc5ed30a83a1e7df748703b48d4/README.md",
+      "kind": "upstream_test_report",
+      "accessed": "2026-09-19",
+      "scope": "Reported Android versions, signing families, and newer VIN key/IV limitations.",
+      "limit": "Android-only reports. No official binary or secret was extracted in this study; iOS 1.6.6 is not tested by this source."
+    },
+    {
+      "id": "extractor-host-matching",
+      "title": "Android extractor gateway selection",
+      "url": "https://github.com/Wysie/zeekr_key_extractor/blob/7875948c22172dc5ed30a83a1e7df748703b48d4/zeekr_extract_secrets.py",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Separate EM and SEA gateway patterns.",
+      "limit": "Source inspection only; matching a region label is insufficient without the observed gateway."
+    },
+    {
+      "id": "apple-keychain-security",
+      "title": "Apple Keychain data protection",
+      "url": "https://support.apple.com/guide/security/keychain-data-protection-secb0694df1a/web",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Code-signing and access-group isolation; device-only backup limits.",
+      "limit": "Does not identify the storage class or hardware key policy used by ZEEKR."
+    },
+    {
+      "id": "region-lookup-unsigned",
+      "title": "Unsigned regional discovery request",
+      "url": "https://gateway-pub-hw-em-sg.zeekrlife.com/overseas-app/region/url",
+      "kind": "public_endpoint_observation",
+      "accessed": "2026-09-19",
+      "scope": "One unsigned GET returned HTTP 401, code 0001, access key or signature missing.",
+      "limit": "No account data sent. The result proves a signature requirement, not the AE routing or digital-key service."
     }
   ]
 }

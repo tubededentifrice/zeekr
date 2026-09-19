@@ -2,14 +2,18 @@
 
 ## App identity
 
-The owner reports the app name **ZEEKR**. That name alone does not identify the regional build.
+The owner uses **ZEEKR**. A read-only installed-app query on 2026-09-19 confirmed
+`com.zeekr.global`, version `1.6.6`, on the iPhone. The owner confirmed a UAE
+account, an owner Digital Key 1.0, and a separate Share vehicle action that asks
+for an email. The key page itself offers Delete and no Share action. Shared-key
+permissions remain unconfirmed.
 
 | Store | App ID | iOS bundle ID | Version returned on 2026-09-19 |
 | --- | --- | --- | --- |
 | UAE | `6504061076` | `com.zeekr.global` | `1.6.6` |
 | Sweden / EU | `6448229216` | `com.zeekreu.customer` | `3.0.9` |
 
-The [UAE listing](https://apps.apple.com/ae/app/zeekr/id6504061076) is the initial regional candidate. Its seller is Hangzhou ZEEKR Automobile Sales and Services Co., Ltd. The installed version and account country still need confirmation. Store versions are observations on the research date, not fixed project dependencies.
+The [UAE listing](https://apps.apple.com/ae/app/zeekr/id6504061076) matches the installed bundle and version. Its seller is Hangzhou ZEEKR Automobile Sales and Services Co., Ltd. Store versions are observations on the research date, not fixed project dependencies. The device query did not inspect app storage, the binary, or network traffic.
 
 The [official EU connected-services page](https://www.zeekr.eu/en-se/connected) links the EU iOS listing and Android package `com.zeekr.overseas`. OpenZeekr reports analysis of Android `com.zeekr.overseas` 3.0.7 and `com.zeekr.global` 1.6.3. Do not treat the Android and iOS package versions as equivalent.
 
@@ -42,6 +46,11 @@ Use [the observation template](../templates/device-observation.md). An Android a
 
 ## Enrollment questions
 
-Identify the actual account, TSP, and digital-key service region before a login implementation. OpenZeekr has EU hosts, project identifiers, and Android device labels in its source. GCC must not be mapped to EU, SEA, or LA by guesswork.
+Identify the actual account, TSP, and digital-key service region before a login implementation. OpenZeekr has EU hosts, project identifiers, and Android device labels in its source. The separate API library now provides a Middle East TSP host candidate. Its UAE project-ID behavior is still an unverified fallback. GCC must not be mapped to another region by guesswork.
 
 The working official key cannot be read from another app's iOS Keychain. A new client will need a supported enrollment, transfer, or import route. Determine whether a separate owner/shared key can be issued to each device without replacing the official key. OpenZeekr reports that login can displace another session on the same account.
+
+See [the enrollment study](key-enrollment.md) for the shared-account candidate,
+exact service sequence, owner-path defect, regional barriers, and work possible
+while the car is about 200 m away. No invitation, login, or key mutation was
+performed in that study.

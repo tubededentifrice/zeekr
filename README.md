@@ -13,6 +13,7 @@ The owner selected app-first work and deferred key enrollment on 2026-09-19. The
 - Full AC control is sent through the cloud in OpenZeekr. Its BLE ventilation byte does not prove cooling, temperature control, or an AC stop command.
 - A watch can use Core Bluetooth directly. Background operation has limits. Automatic access needs separate tests on both Apple platforms.
 - OpenZeekr obtains digital key credentials through online enrollment. A fully offline enrollment method has not been established.
+- The owner has a UAE account and Digital Key 1.0. A separate shared account is the preferred enrollment candidate; regional signing and Bluetooth permissions still need proof. See [the enrollment study](docs/research/key-enrollment.md).
 - Replacing the physical key also requires drive authorization, restart, offline, key expiry, and recovery tests. Unlock alone is not enough.
 
 Read [the findings](docs/research/findings.md) first. They include the source limits and the problems found in the reference implementation.
@@ -40,6 +41,7 @@ Open [the iPhone project](apps/ios/Zeekr.xcodeproj). See [the app guide](apps/io
 | [Requirements](docs/requirements.md) | Product scope and acceptance conditions |
 | [Research findings](docs/research/findings.md) | Main conclusions and limits |
 | [Official app](docs/research/official-app.md) | App identity, public features, and evidence gaps |
+| [Key enrollment](docs/research/key-enrollment.md) | UAE routing, shared account, key binding, and work possible away from the car |
 | [BLE protocol](docs/research/ble-protocol.md) | Discovery, enrollment, session, and command details |
 | [Capability matrix](docs/research/capabilities.md) | Every control group found in the review |
 | [Apple platform limits](docs/research/apple-platforms.md) | iPhone, watch, shortcuts, and background operation |

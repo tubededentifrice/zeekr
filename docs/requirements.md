@@ -4,7 +4,7 @@ Research date: 2026-09-19. Status: iPhone interface and local test release; enro
 
 ## Target and scope
 
-The owner confirmed a 2024 GCC ZEEKR 001 and a working manual Bluetooth key in the official ZEEKR app. Automatic lock and unlock do not work through that app on this car. The development tools detect an iPhone 17 Pro on iOS 27.0. The exact account country, installed official app version, and vehicle firmware remain unknown.
+The owner confirmed a 2024 GCC ZEEKR 001 and a working manual Bluetooth key in the official ZEEKR app. Automatic lock and unlock do not work through that app on this car. The development tools detect an iPhone 17 Pro on iOS 27.0 and global app `com.zeekr.global` version `1.6.6`. The owner confirmed a UAE account and an owner Digital Key 1.0. Vehicle firmware remains unknown.
 
 On 2026-09-19, the owner requested the iPhone app first and selected key enrollment as the next step. This release must expose all researched controls with accurate limits, provide local command and proximity tests, and build for the physical phone. Real commands remain blocked until enrollment and protocol work are complete. The watch is deferred until phone validation.
 
@@ -36,7 +36,7 @@ compatibility details and project documents.
 
 Vehicle commands use BLE only. A failed command must not silently use cellular data, Wi-Fi, or a phone relay. Beyond car BLE range, a local command cannot reach the vehicle. A cellular Apple Watch does not extend BLE range.
 
-The reference key enrollment uses the ZEEKR cloud. The proposed boundary is online enrollment and revocation, with offline use after enrollment. This is a research conclusion, not an implemented exception. Confirm a supported enrollment route before implementation. Do not promise that initial setup can be fully offline.
+The reference key enrollment uses the ZEEKR cloud. The proposed boundary is online enrollment and revocation, with offline use after enrollment. This is a research conclusion, not an implemented exception. Confirm a supported route before live enrollment. The current candidate is a separate UAE account with shared vehicle access; Bluetooth permission and regional inputs remain unverified. See [the enrollment study](research/key-enrollment.md). Do not promise that initial setup can be fully offline.
 
 ## Priority and unknowns
 

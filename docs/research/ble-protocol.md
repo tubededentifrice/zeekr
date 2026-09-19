@@ -26,9 +26,14 @@ OpenZeekr uses writes with response and fragments frames to the negotiated paylo
 
 ## Key enrollment
 
+The [UAE enrollment study](key-enrollment.md) adds the target app identity,
+shared-account candidate, regional lookup limits, and defects in the existing
+owner/shared provisioning paths. Its state and error checks take precedence over
+an assumption that the reference flow can be copied unchanged.
+
 Sources: [DkProvisioning.kt](https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkProvisioning.kt), [DkIdentity.kt](https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkIdentity.kt), and [ZeekrConst.kt](https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/net/ZeekrConst.kt).
 
-The reference generates a P-256 device key pair and CSR. It enrolls the certificate, creates or accepts a shared Bluetooth key, obtains the key data, and waits for cloud-to-car synchronization. This is application authentication, not ordinary Bluetooth pairing.
+The reference generates a P-256 device key pair and CSR. It enrolls the certificate, then creates an owner key or accepts a shared Bluetooth key when the selected branch requires it. The shared binding path polls cloud-to-car synchronization before key download, but can continue after a timeout. The owner path does not perform that poll or rebind an existing key. This is application authentication, not ordinary Bluetooth pairing.
 
 The certificate route starts with `ms-tsp-dkbs-geely/api/v1.0/app/certificatecenter`. The digital-key routes start with `ms-tsp-dkbs-geely/api/v1.0/app/digital-key-center`.
 
@@ -45,7 +50,7 @@ The certificate route starts with `ms-tsp-dkbs-geely/api/v1.0/app/certificatecen
 | GET | `phonecoef` | Fetch phone calibration |
 | POST | `remove-one-key` | Request key revocation |
 
-The signed digital-key message is ASCII `userId + deviceId + vin`, signed with ECDSA-SHA256, DER encoded, then Base64 encoded. This is in addition to authenticated and signed HTTP transport. The reference also contains a separate ECARX/xchanger account session. Its exact GCC requirement remains unresolved.
+The signed digital-key message is UTF-8 `userId + deviceId + vin`, with no separators, signed with ECDSA-SHA256, DER encoded, then Base64 encoded without line breaks. This is in addition to authenticated and signed HTTP transport. The reference also contains a separate ECARX/xchanger account session. Its exact GCC requirement remains unresolved.
 
 Store the device private key, issued app certificate, device ID, VIN, cloud key ID, short `bookId`, digital key blob, and required calibration. The BLE key ID is the short hex `bookId`, not the long cloud `dkId`. Keep all real values out of this repository.
 

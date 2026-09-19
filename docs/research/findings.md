@@ -43,6 +43,23 @@ These are source observations, not claims that the official app has the same def
 
 ## Official app analysis limit
 
-The review directly inspected official store metadata and official ZEEKR product documentation. It also inspected OpenZeekr code that attributes protocol details to Android app analysis. The owner's installed iOS binary, its live screens, and its BLE traffic were not available. Therefore this is not a completed binary or runtime analysis of that app.
+The review directly inspected official store metadata and official ZEEKR product documentation. It also inspected OpenZeekr code that attributes protocol details to Android app analysis. A later read-only device query confirmed the installed global iOS app and version. The owner described its key and sharing pages. The installed iOS binary, live screen capture, and BLE traffic were not inspected. Therefore this is not a completed binary or runtime analysis of that app.
 
 The next research step is a controlled official-app test with network access disabled. Record the visible BLE controls and actual vehicle effects. Capture only the information needed to resolve command and enrollment gaps. See [official app research](official-app.md).
+
+## Enrollment study
+
+The owner confirmed the UAE account and an owner Digital Key 1.0. The official
+app has a separate vehicle-share action by email. The preferred candidate is a
+secondary UAE account with shared vehicle access and a new app-generated key.
+Whether the share includes Bluetooth-key access remains unconfirmed.
+
+The API library has a Middle East TSP host candidate. Request-signing material,
+the actual country routing, UAE project ID, and xchanger settings remain open.
+An unsigned regional lookup returned a signature-required response. No account
+login or key operation was attempted.
+
+The owner branch in the reference does not bind an existing owner key to a new
+device before download. It is not a proven way to retain the current owner key
+and add our client. Shared binding and synchronization errors can also be ignored
+by the reference. See [the detailed study](key-enrollment.md) before a port.

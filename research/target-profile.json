@@ -5,18 +5,26 @@
   "model_year": 2024,
   "market": "GCC",
   "official_app_name": "ZEEKR",
-  "official_app_bundle_id": null,
-  "official_app_version": null,
-  "account_country": null,
+  "official_app_bundle_id": "com.zeekr.global",
+  "official_app_version": "1.6.6",
+  "account_country": "AE",
   "vehicle_firmware": null,
-  "phone_model": null,
-  "ios_version": null,
+  "phone_model": "iPhone 17 Pro",
+  "ios_version": "27.0",
   "watch_model": null,
   "watchos_version": null,
   "owner_reports": {
     "manual_official_bluetooth_key_works": true,
     "official_automatic_lock_unlock_works": false,
-    "date": "2026-09-19"
+    "date": "2026-09-19",
+    "digital_key_version": "1.0",
+    "digital_key_role": "owner",
+    "key_page_actions": [
+      "delete"
+    ],
+    "vehicle_share_by_email_available": true,
+    "vehicle_share_bluetooth_permission": "unconfirmed",
+    "car_distance_during_enrollment_research_m": 200
   },
   "command_transport": "ble_only",
   "cloud_command_fallback": false,
@@ -25,5 +33,20 @@
   "project_ble_validated": false,
   "supported_commands": [],
   "evidence_records": [],
-  "source_ids": ["oz-readme", "oz-protocol", "official-ae-store", "apple-core"]
+  "source_ids": [
+    "oz-readme",
+    "oz-protocol",
+    "official-ae-store",
+    "apple-core",
+    "oz-enrollment-login",
+    "ev-api-regions",
+    "ha-country-map",
+    "apple-keychain-security"
+  ],
+  "enrollment_candidate": "Separate UAE account with shared vehicle access; regional and Bluetooth entitlement checks pending",
+  "device_metadata_observation": {
+    "date": "2026-09-19",
+    "method": "Read-only devicectl installed-app query; earlier device details query",
+    "scope": "App bundle/version and phone/OS only; no app storage or vehicle test"
+  }
 }
