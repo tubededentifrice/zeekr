@@ -1,0 +1,49 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 77;
+	objects = {
+		PROJECT = { isa = PBXProject; attributes = { BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 2700; }; buildConfigurationList = PROJECTCONFIGS; compatibilityVersion = "Xcode 16.0"; developmentRegion = en; knownRegions = (en, Base); mainGroup = ROOT; productRefGroup = PRODUCTS; projectDirPath = ""; projectRoot = ""; packageReferences = (LOCALPACKAGE); targets = (APP, UITESTS, UNITTESTS); };
+		ROOT = { isa = PBXGroup; children = (SOURCE, UISOURCE, UNITSOURCE, PRODUCTS); sourceTree = "<group>"; };
+		PRODUCTS = { isa = PBXGroup; children = (APPPRODUCT, UIPRODUCT, UNITPRODUCT); name = Products; sourceTree = "<group>"; };
+		SOURCE = { isa = PBXFileSystemSynchronizedRootGroup; exceptions = (SOURCEEXCEPTIONS); path = Zeekr; sourceTree = "<group>"; };
+		SOURCEEXCEPTIONS = { isa = PBXFileSystemSynchronizedBuildFileExceptionSet; membershipExceptions = (Info.plist); target = APP; };
+		UISOURCE = { isa = PBXFileSystemSynchronizedRootGroup; path = ZeekrUITests; sourceTree = "<group>"; };
+		UNITSOURCE = { isa = PBXFileSystemSynchronizedRootGroup; path = ZeekrTests; sourceTree = "<group>"; };
+		LOCALPACKAGE = { isa = XCLocalSwiftPackageReference; relativePath = ../../packages/VehicleCore; };
+		COREPRODUCT = { isa = XCSwiftPackageProductDependency; package = LOCALPACKAGE; productName = VehicleCore; };
+		COREBUILD = { isa = PBXBuildFile; productRef = COREPRODUCT; };
+		UNITCOREBUILD = { isa = PBXBuildFile; productRef = COREPRODUCT; };
+		APP = { isa = PBXNativeTarget; buildConfigurationList = APPCONFIGS; buildPhases = (APPSOURCES, APPFRAMEWORKS, APPRESOURCES); buildRules = (); dependencies = (); fileSystemSynchronizedGroups = (SOURCE); name = Zeekr; packageProductDependencies = (COREPRODUCT); productName = Zeekr; productReference = APPPRODUCT; productType = "com.apple.product-type.application"; };
+		APPPRODUCT = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zeekr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		APPSOURCES = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		APPFRAMEWORKS = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (COREBUILD); runOnlyForDeploymentPostprocessing = 0; };
+		APPRESOURCES = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		UITESTS = { isa = PBXNativeTarget; buildConfigurationList = UICONFIGS; buildPhases = (UISOURCES, UIFRAMEWORKS, UIRESOURCES); buildRules = (); dependencies = (APPDEPENDENCY); fileSystemSynchronizedGroups = (UISOURCE); name = ZeekrUITests; packageProductDependencies = (); productName = ZeekrUITests; productReference = UIPRODUCT; productType = "com.apple.product-type.bundle.ui-testing"; };
+		UIPRODUCT = { isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeekrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		UISOURCES = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		UIFRAMEWORKS = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		UIRESOURCES = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		UNITTESTS = { isa = PBXNativeTarget; buildConfigurationList = UNITCONFIGS; buildPhases = (UNITSOURCES, UNITFRAMEWORKS, UNITRESOURCES); buildRules = (); dependencies = (APPDEPENDENCY); fileSystemSynchronizedGroups = (UNITSOURCE); name = ZeekrTests; packageProductDependencies = (COREPRODUCT); productName = ZeekrTests; productReference = UNITPRODUCT; productType = "com.apple.product-type.bundle.unit-test"; };
+		UNITPRODUCT = { isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeekrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		UNITSOURCES = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		UNITFRAMEWORKS = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (UNITCOREBUILD); runOnlyForDeploymentPostprocessing = 0; };
+		UNITRESOURCES = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		APPPROXY = { isa = PBXContainerItemProxy; containerPortal = PROJECT; proxyType = 1; remoteGlobalIDString = APP; remoteInfo = Zeekr; };
+		APPDEPENDENCY = { isa = PBXTargetDependency; target = APP; targetProxy = APPPROXY; };
+		PROJECTCONFIGS = { isa = XCConfigurationList; buildConfigurations = (PROJECTDEBUG, PROJECTRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		PROJECTDEBUG = { isa = XCBuildConfiguration; buildSettings = { SWIFT_VERSION = 6.0; IPHONEOS_DEPLOYMENT_TARGET = 18.0; SDKROOT = iphoneos; CLANG_ENABLE_MODULES = YES; ENABLE_USER_SCRIPT_SANDBOXING = YES; DEBUG_INFORMATION_FORMAT = dwarf; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; ENABLE_TESTABILITY = YES; ONLY_ACTIVE_ARCH = YES; }; name = Debug; };
+		PROJECTRELEASE = { isa = XCBuildConfiguration; buildSettings = { SWIFT_VERSION = 6.0; IPHONEOS_DEPLOYMENT_TARGET = 18.0; SDKROOT = iphoneos; CLANG_ENABLE_MODULES = YES; ENABLE_USER_SCRIPT_SANDBOXING = YES; DEBUG_INFORMATION_FORMAT = dwarf-with-dsym; SWIFT_OPTIMIZATION_LEVEL = "-O"; ENABLE_TESTABILITY = NO; }; name = Release; };
+		APPCONFIGS = { isa = XCConfigurationList; buildConfigurations = (APPDEBUG, APPRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		APPDEBUG = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = "$(TARGET_NAME)"; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = 1; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO; PRODUCT_BUNDLE_IDENTIFIER = "$(ZEEKR_BUNDLE_ID)"; ZEEKR_BUNDLE_ID = org.example.zeekr.phone; INFOPLIST_FILE = Zeekr/Info.plist; MARKETING_VERSION = 0.1.0; CURRENT_PROJECT_VERSION = 1; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; }; name = Debug; };
+		APPRELEASE = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = "$(TARGET_NAME)"; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = 1; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO; PRODUCT_BUNDLE_IDENTIFIER = "$(ZEEKR_BUNDLE_ID)"; ZEEKR_BUNDLE_ID = org.example.zeekr.phone; INFOPLIST_FILE = Zeekr/Info.plist; MARKETING_VERSION = 0.1.0; CURRENT_PROJECT_VERSION = 1; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; }; name = Release; };
+		UICONFIGS = { isa = XCConfigurationList; buildConfigurations = (UIDEBUG, UIRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		UIDEBUG = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = "$(TARGET_NAME)"; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = 1; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO; PRODUCT_BUNDLE_IDENTIFIER = "$(ZEEKR_BUNDLE_ID).uitests"; ZEEKR_BUNDLE_ID = org.example.zeekr.phone; GENERATE_INFOPLIST_FILE = YES; TEST_TARGET_NAME = Zeekr; }; name = Debug; };
+		UIRELEASE = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = "$(TARGET_NAME)"; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = 1; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO; PRODUCT_BUNDLE_IDENTIFIER = "$(ZEEKR_BUNDLE_ID).uitests"; ZEEKR_BUNDLE_ID = org.example.zeekr.phone; GENERATE_INFOPLIST_FILE = YES; TEST_TARGET_NAME = Zeekr; }; name = Release; };
+		UNITCONFIGS = { isa = XCConfigurationList; buildConfigurations = (UNITDEBUG, UNITRELEASE); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		UNITDEBUG = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = "$(TARGET_NAME)"; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = 1; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO; PRODUCT_BUNDLE_IDENTIFIER = "$(ZEEKR_BUNDLE_ID).unittests"; ZEEKR_BUNDLE_ID = org.example.zeekr.phone; GENERATE_INFOPLIST_FILE = YES; TEST_TARGET_NAME = Zeekr; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zeekr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Zeekr"; BUNDLE_LOADER = "$(TEST_HOST)"; }; name = Debug; };
+		UNITRELEASE = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = "$(TARGET_NAME)"; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = 1; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO; PRODUCT_BUNDLE_IDENTIFIER = "$(ZEEKR_BUNDLE_ID).unittests"; ZEEKR_BUNDLE_ID = org.example.zeekr.phone; GENERATE_INFOPLIST_FILE = YES; TEST_TARGET_NAME = Zeekr; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zeekr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Zeekr"; BUNDLE_LOADER = "$(TEST_HOST)"; }; name = Release; };
+	};
+	rootObject = PROJECT;
+}

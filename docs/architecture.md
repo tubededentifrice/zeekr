@@ -1,6 +1,8 @@
-# Planned architecture
+# Architecture
 
-Status: design only. The first implementation should use Swift, SwiftUI, and shared Swift modules. Keep the core independent of the phone UI. Use a provisional baseline of iOS 17 and watchOS 10; confirm the owner's devices before setting deployment targets. Test current OS releases, including the iOS 26 relaunch rules.
+The iPhone interface uses Swift 6 and SwiftUI with an iOS 18 baseline. `VehicleCore` holds the shared catalog, command gate, demo results, and pure proximity policy. `AppModel` owns serialized local demo commands and cancels them on mode or lifecycle changes. `BluetoothDiscovery` scans on the main queue and has no connection or write path. It keeps anonymous candidate labels in memory only.
+
+The following vehicle-session and watch design is not implemented. Enrollment is deferred by owner choice. Live controls always fail closed. Shortcuts only open app pages. Real background proximity remains off; no background BLE entitlement is declared. Test current OS releases before enabling it.
 
 ```mermaid
 flowchart TD

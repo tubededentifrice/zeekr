@@ -1,5 +1,12 @@
-# Planned shared packages
+# Shared Swift code
 
-Reserve shared Swift modules for protocol framing, credentials, session state, capabilities, and command results. Keep device UI and lifecycle code outside these modules.
+[VehicleCore](VehicleCore/Package.swift) contains the capability catalog, command
+gate, demo result stages, and proximity policy. It has no radio, network, UI, or
+credential dependency. Both the future watch target and the phone can use it.
 
-Do not create a package with placeholder implementations. See [the architecture](../docs/architecture.md).
+Run `make test` from the repository root. The phone target uses this local package.
+The policy takes signal values and monotonic times as inputs. Authentication is
+an explicit input. Signal loss or stale data cannot confirm a lock.
+
+The encrypted vehicle protocol is not implemented. See
+[the architecture](../docs/architecture.md) and [protocol gaps](../docs/research/ble-protocol.md).

@@ -2,7 +2,15 @@
 
 ## Phase 0: repository and research
 
-Complete in this change: requirements, source review, protocol notes, Apple platform assessment, capability catalog, repository checks, and direct-main workflow. App implementation is not part of this phase.
+Complete: requirements, source review, protocol notes, Apple platform assessment, capability catalog, repository checks, and direct-main workflow.
+
+## Phone interface release
+
+The owner requested the phone first on 2026-09-19 and deferred enrollment to the
+next step. The iPhone app now has the vehicle interface, full research catalog,
+read-only discovery, local command demos, proximity policy tests, and test
+history. Shortcuts open app pages. Real commands and live proximity remain off.
+See [the app guide](../apps/ios/README.md).
 
 ## Phase 1: resolve feasibility
 
@@ -16,11 +24,11 @@ Exit condition: a reviewed protocol profile for the target car, or a clear list 
 
 ## Phase 2: protocol and manual key
 
-After the user requests implementation, build pure protocol modules and meaningful fixture tests. Then add a diagnostic phone session for enrollment, authentication, manual lock/unlock, and drive authorization. Require offline device evidence and accurate result handling.
+Implementation is authorized. After enrollment research, build pure protocol modules and meaningful fixture tests. Add the phone session for authentication, manual lock/unlock, and drive authorization. Require offline device evidence and accurate result handling. The existing interface must not enable a control before the session and command policy support it.
 
 ## Phase 3: independent watch
 
-Add watch credentials, direct BLE, and bounded device handover. Repeat manual controls with the phone powered off. Test watch removal, passcode lock, reboot, revocation, and key expiry.
+Start after phone validation, as the owner requested. Add watch credentials, direct BLE, and bounded device handover. Repeat manual controls with the phone powered off. Test watch removal, passcode lock, reboot, revocation, and key expiry.
 
 ## Phase 4: controls and local shortcuts
 

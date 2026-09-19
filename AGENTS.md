@@ -1,6 +1,7 @@
 # Repository instructions
 
 - Use ASD-STE100 Simplified Technical English for user reports, documents, code comments, commit messages, and pull requests.
+- Never add useless help messages to UIs.
 - When a task is complete, run the applicable checks and the required self-review below. Then commit the changes and push directly to `main`, unless the user specifies another workflow.
 - Do not use a feature branch or a pull request by default. Do not force-push. Preserve changes from other contributors.
 - This project is in the research and setup phase. Do not implement the iOS app, watchOS app, or vehicle protocol until the user requests implementation.

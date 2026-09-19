@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Report the local tools required for research and future Apple builds."""
+"""Report the local tools required for research and Apple builds."""
 
 import platform
 import shutil
@@ -31,7 +31,8 @@ def main():
         except subprocess.TimeoutExpired:
             print(f"TIMEOUT: {' '.join(command)}")
             missing = True
-    print("\nApp targets do not exist yet. This check does not prove signing or device support.")
+    print("\nThe iPhone target is in apps/ios/Zeekr.xcodeproj.")
+    print("This tool check does not build, sign, or test the app.")
     return 1 if missing else 0
 
 

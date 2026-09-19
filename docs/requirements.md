@@ -1,10 +1,12 @@
 # Requirements
 
-Research date: 2026-09-19. Status: setup only.
+Research date: 2026-09-19. Status: iPhone interface and local test release; enrollment deferred.
 
 ## Target and scope
 
-The owner confirmed a 2024 GCC ZEEKR 001 and a working manual Bluetooth key in the official ZEEKR app. Automatic lock and unlock do not work through that app on this car. The exact account country, installed app version, vehicle firmware, iPhone model, and Apple Watch model are still unknown.
+The owner confirmed a 2024 GCC ZEEKR 001 and a working manual Bluetooth key in the official ZEEKR app. Automatic lock and unlock do not work through that app on this car. The development tools detect an iPhone 17 Pro on iOS 27.0. The exact account country, installed official app version, and vehicle firmware remain unknown.
+
+On 2026-09-19, the owner requested the iPhone app first and selected key enrollment as the next step. This release must expose all researched controls with accurate limits, provide local command and proximity tests, and build for the physical phone. Real commands remain blocked until enrollment and protocol work are complete. The watch is deferred until phone validation.
 
 Use this vehicle as the first compatibility profile. Add other models and regions only after evidence supports them.
 
@@ -24,6 +26,11 @@ Use this vehicle as the first compatibility profile. Add other models and region
 | R12 | Accurate feedback | Distinguish sent, received, rejected, timed out, and observed vehicle state |
 
 The phrase “open/close the car” means unlock/lock in the proximity requirement. Automatic movement of doors, windows, or the tailgate is not included. Such movement remains a separate manual capability if the car supports it.
+
+Keep the interface concise. Do not add help cards, repeated explanations, or
+development instructions to normal screens. Show only relevant status, errors,
+and short reasons for unavailable controls. Put detailed evidence in optional
+compatibility details and project documents.
 
 ## Bluetooth boundary
 

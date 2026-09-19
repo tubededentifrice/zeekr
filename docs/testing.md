@@ -2,6 +2,18 @@
 
 No vehicle tests have been run by this project. Use [the observation template](templates/device-observation.md) and [the compatibility template](templates/compatibility-profile.json).
 
+## Current phone checks
+
+The app-first release has automated tests for capability blocking, demo result
+stages, proximity dwell and cooldown, stale or invalid signals, cancellation,
+mode changes, and UI navigation. `make test` runs the shared tests; `make ios-test`
+runs the app tests. `make ios-build` and `make ios-device-build` build the phone app.
+See [the app guide](../apps/ios/README.md) for local demo steps and signing.
+
+These checks do not validate the encrypted protocol. No authentication, command
+actuation, live proximity, or physical-key replacement result can be inferred
+from a demo. The owner deferred enrollment to the next vehicle setup step.
+
 ## Test conditions
 
 Use a parked vehicle in a controlled location for access and comfort tests. Keep the physical key available for recovery. For proof of digital-key access or start, keep it and all other enrolled devices outside detection range. Clear people and objects from any panel that will move.

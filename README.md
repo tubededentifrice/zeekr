@@ -1,10 +1,10 @@
 # ZEEKR Bluetooth key for iPhone and Apple Watch
 
-This repository contains the requirements, protocol research, and development setup for a simple iOS and watchOS vehicle app. No app or vehicle command code is implemented.
+This repository contains an iPhone app, shared Swift policy code, and vehicle protocol research. The app has a vehicle interface, a complete control catalog, local command and proximity demos, and read-only Bluetooth discovery. Key enrollment and real vehicle commands are not implemented.
 
 The first target is a **2024 GCC ZEEKR 001**. The owner uses the official **ZEEKR** app. Its manual Bluetooth key works. It does not automatically lock or unlock this car.
 
-The planned apps will provide manual Bluetooth controls, approach unlock, walk-away lock, and local shortcuts. The watch must operate directly with the car when the phone is absent. The interface will use a simple vehicle view and quick controls, similar to the Tesla app.
+The owner selected app-first work and deferred key enrollment on 2026-09-19. The phone comes first; the watch follows phone validation. The later watch must operate directly with the car when the phone is absent. The iPhone interface uses a simple vehicle view and quick controls, with a dark appearance.
 
 ## Current findings
 
@@ -24,11 +24,14 @@ Run these commands from the repository root:
 ```sh
 make check
 make doctor
+make test
+make ios-build
+make ios-test
 ```
 
 `make check` uses Python 3.10 or later and Git. It checks document links, text format, research records, and selected secret file patterns. It makes no vehicle or network requests. `make doctor` checks the local Apple development tools.
 
-There is no Xcode project or Swift package yet. Creating empty build targets would not test the unresolved protocol. The target structure and build plan are in [development](docs/development.md).
+Open [the iPhone project](apps/ios/Zeekr.xcodeproj). See [the app guide](apps/ios/README.md) for demo tests, signing, and installation. The app needs iOS 18 or later. Simulator tests and a signed build do not prove car support. The target structure is in [development](docs/development.md).
 
 ## Documents
 
