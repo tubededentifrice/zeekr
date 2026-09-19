@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "profile_id": "synthetic-profile",
+  "model": "001",
+  "model_year": 2024,
+  "market": "GCC",
+  "vehicle_firmware": null,
+  "official_app_bundle_id": null,
+  "official_app_version": null,
+  "account_country": null,
+  "phone_model": null,
+  "ios_version": null,
+  "watch_model": null,
+  "watchos_version": null,
+  "project_ble_validated": false,
+  "supported_commands": [],
+  "evidence_records": []
+}

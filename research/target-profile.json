@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "profile_id": "zeekr-001-2024-gcc-research",
+  "model": "001",
+  "model_year": 2024,
+  "market": "GCC",
+  "official_app_name": "ZEEKR",
+  "official_app_bundle_id": null,
+  "official_app_version": null,
+  "account_country": null,
+  "vehicle_firmware": null,
+  "phone_model": null,
+  "ios_version": null,
+  "watch_model": null,
+  "watchos_version": null,
+  "owner_reports": {
+    "manual_official_bluetooth_key_works": true,
+    "official_automatic_lock_unlock_works": false,
+    "date": "2026-09-19"
+  },
+  "command_transport": "ble_only",
+  "cloud_command_fallback": false,
+  "watch_requires_direct_ble": true,
+  "enrollment_route": "unresolved",
+  "project_ble_validated": false,
+  "supported_commands": [],
+  "evidence_records": [],
+  "source_ids": ["oz-readme", "oz-protocol", "official-ae-store", "apple-core"]
+}

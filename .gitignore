@@ -1,0 +1,43 @@
+# Local operating system and editor files
+.DS_Store
+._*
+.idea/
+.vscode/
+*.swp
+
+# Xcode and Swift build output
+.build/
+.swiftpm/
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.xcarchive/
+*.ipa
+*.dSYM/
+
+# Private research, credentials, and signing files
+.local/
+captures/
+secrets/
+.env
+.env.*
+!.env.example
+*.local.*
+*.p12
+*.p8
+*.mobileprovision
+*.provisionprofile
+*.key
+*.pem
+*.apk
+*.aab
+*.pcap
+*.pcapng
+*.btsnoop
+*.log
+
+# Python tool output
+__pycache__/
+*.py[cod]
+.venv/

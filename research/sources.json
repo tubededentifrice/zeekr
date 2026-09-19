@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-09-19",
+  "openzeekr_revision": "00661111f77fd613938309b8fb3f691ac79388f7",
+  "sources": [
+    {
+      "id": "oz-readme",
+      "title": "OpenZeekr README",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/README.md",
+      "kind": "upstream_report",
+      "accessed": "2026-09-19",
+      "scope": "EU key, Wear OS, proximity, cloud controls, and stated limits.",
+      "limit": "Upstream reports are not GCC or Apple device tests."
+    },
+    {
+      "id": "oz-protocol",
+      "title": "BLE constants",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkProtocol.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "GATT UUIDs, command IDs, control bytes, and channel mapping.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-gatt",
+      "title": "BLE transport",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkBleManager.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Advertisement parsing, GATT setup, fragmentation, and writes.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-frame",
+      "title": "Frame codec",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkFrame.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Frame fields, CRC, sequence, and payload prefix.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-crypto",
+      "title": "Digital key crypto",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkCrypto.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "CBC, full-point ECDH, GCM, and signing operations.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-session",
+      "title": "Digital key session",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/RealDkSession.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Handshake, reconnect rejection, receipt handling, and custom commands.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-trust",
+      "title": "Vehicle certificate checks",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkTrust.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Certificate material and empty-store behavior.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-enrollment",
+      "title": "Digital key enrollment",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkProvisioning.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Certificate and key APIs, synchronization, and revocation.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-identity",
+      "title": "Device identity",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkIdentity.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Key generation, CSR, storage, and credential export.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-credential",
+      "title": "Credential fields",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/DkCredential.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Cloud key ID, short bookId, and calibration data.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-dispatch",
+      "title": "Command routing",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/remote/VehicleControl.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Actual BLE command mappings and cloud fallback.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-commands",
+      "title": "Cloud command catalog",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/remote/Command.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Climate and other controls sent through cloud services.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-proximity",
+      "title": "App proximity policy",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/ProximityController.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "RSSI policy and cloud lock fallback.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-car-proximity",
+      "title": "Vehicle proximity research",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/ble/CarProximityController.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Calibration and vehicle walk-away setting.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-config",
+      "title": "Configuration defaults",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/config/SecretsConfig.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Current RSSI settings and sensitivity presets.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-region",
+      "title": "Region constants",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/net/ZeekrConst.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "EU services and Android device values.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-watch-protocol",
+      "title": "Watch coordination",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/core/src/main/java/com/openzeekr/app/wear/WearKeyProtocol.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Key copy, purge, and link handover messages.",
+      "limit": "Pinned Android source; target vehicle behavior is not established."
+    },
+    {
+      "id": "oz-watch-ui",
+      "title": "Wear OS command path",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/wear/src/main/java/com/openzeekr/wear/WearApp.kt",
+      "kind": "source_observation",
+      "accessed": "2026-09-19",
+      "scope": "Direct watch lock/unlock and phone coordination.",
+      "limit": "This is Wear OS, not watchOS. Write success can drive the displayed result."
+    },
+    {
+      "id": "oz-license",
+      "title": "OpenZeekr MIT license",
+      "url": "https://github.com/borconi/openzeekr/blob/00661111f77fd613938309b8fb3f691ac79388f7/LICENSE",
+      "kind": "license",
+      "accessed": "2026-09-19",
+      "scope": "Upstream copyright and license.",
+      "limit": "Retain the full notice if code is copied or adapted."
+    },
+    {
+      "id": "official-ae-store",
+      "title": "ZEEKR UAE App Store listing",
+      "url": "https://apps.apple.com/ae/app/zeekr/id6504061076",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Global iOS app identity and advertised features; metadata returned version 1.6.6.",
+      "limit": "The installed app version is unknown. Features are not separated by transport."
+    },
+    {
+      "id": "official-ae-metadata",
+      "title": "Apple UAE app metadata",
+      "url": "https://itunes.apple.com/lookup?id=6504061076&country=ae",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Reproducible metadata lookup for the regional candidate com.zeekr.global.",
+      "limit": "The initial observation used Apple search for zeekr in the UAE; store metadata changes."
+    },
+    {
+      "id": "official-eu-store",
+      "title": "ZEEKR EU App Store metadata",
+      "url": "https://itunes.apple.com/lookup?id=6448229216&country=se",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "EU iOS identity com.zeekreu.customer; returned version 3.0.9.",
+      "limit": "EU listing, not the confirmed installed GCC app."
+    },
+    {
+      "id": "official-connected",
+      "title": "ZEEKR EU connected services",
+      "url": "https://www.zeekr.eu/en-se/connected",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Bluetooth DK1, passive start, and DK3 Wallet/UWB distinctions.",
+      "limit": "EU information does not establish GCC compatibility."
+    },
+    {
+      "id": "official-ae-001",
+      "title": "ZEEKR UAE 001 product page",
+      "url": "https://www.zeekrlife.com/en-ae/models/001",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "UAE vehicle equipment and app promotion.",
+      "limit": "Vehicle equipment does not establish BLE command support."
+    },
+    {
+      "id": "apple-core",
+      "title": "Core Bluetooth",
+      "url": "https://developer.apple.com/documentation/corebluetooth",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Direct BLE framework, including watchOS availability.",
+      "limit": "Framework availability does not prove vehicle protocol compatibility."
+    },
+    {
+      "id": "apple-independent",
+      "title": "Independent watchOS apps",
+      "url": "https://developer.apple.com/documentation/watchos-apps/creating-independent-watchos-apps",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Independent operation and limits on reliance on Watch Connectivity.",
+      "limit": "Independent installation also requires independent setup."
+    },
+    {
+      "id": "apple-relaunch",
+      "title": "TN3115 Bluetooth relaunch rules",
+      "url": "https://developer.apple.com/documentation/technotes/tn3115-bluetooth-state-restoration-app-relaunch-rules",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Force quit, reboot, Bluetooth switches, and iOS 26 AccessorySetupKit note.",
+      "limit": "Test the exact OS and accessory setup route."
+    },
+    {
+      "id": "apple-watch-sample",
+      "title": "Background BLE on watchOS",
+      "url": "https://developer.apple.com/documentation/watchkit/interacting-with-bluetooth-peripherals-during-background-app-refresh",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Apple physical-device sample for background BLE.",
+      "limit": "A sample is not proof of continuous digital-key operation."
+    },
+    {
+      "id": "apple-runtime",
+      "title": "Extended runtime sessions",
+      "url": "https://developer.apple.com/documentation/watchkit/using-extended-runtime-sessions",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Allowed session purposes and finite durations.",
+      "limit": "A vehicle key must not misuse unrelated background modes."
+    },
+    {
+      "id": "apple-intents",
+      "title": "App Intent",
+      "url": "https://developer.apple.com/documentation/appintents/appintent",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "System entry point for local app actions.",
+      "limit": "Execution location and runtime need tests on each target."
+    },
+    {
+      "id": "apple-complications",
+      "title": "Accessory widgets and watch complications",
+      "url": "https://developer.apple.com/documentation/widgetkit/creating-accessory-widgets-and-watch-complications",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "WidgetKit surfaces and shared iOS/watchOS design.",
+      "limit": "A complication does not grant continuous runtime."
+    },
+    {
+      "id": "apple-widget-actions",
+      "title": "Interactive widgets",
+      "url": "https://developer.apple.com/documentation/widgetkit/adding-interactivity-to-widgets-and-live-activities",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "App Intent actions, process selection, and locked-device behavior.",
+      "limit": "Interaction support depends on platform and widget family."
+    },
+    {
+      "id": "apple-background",
+      "title": "iOS Core Bluetooth background guide",
+      "url": "https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/CoreBluetoothBackgroundProcessingForIOSApps/PerformingTasksWhileYourAppIsInTheBackground.html",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "Background modes, scan changes, and state restoration.",
+      "limit": "Archived guide; read current TN3115 with it."
+    },
+    {
+      "id": "apple-watch-alerts",
+      "title": "WWDC22 watch Bluetooth alerts",
+      "url": "https://developer.apple.com/videos/play/wwdc2022/10135/",
+      "kind": "official_publication",
+      "accessed": "2026-09-19",
+      "scope": "watchOS 9 background discovery, characteristic alerts, Series 6 requirement, and runtime limits.",
+      "limit": "Historical platform description; current device budgets need tests."
+    }
+  ]
+}
